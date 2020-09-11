@@ -1,0 +1,26 @@
+
+.form{
+    width: 100%;
+    @include flex(space-around, center);
+    flex-direction: $c;
+    align-items: $text;
+    text-align: $text;
+}
+input{
+    margin-bottom: 2rem;
+    width: 20rem;
+    border-radius: 5rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: $shadow;
+}
+
+input::placeholder{
+    color: #aaa;
+}
+
+#saveScoreBtn{
+    display: $f;
+    justify-content: $text;
+}

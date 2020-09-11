@@ -1,0 +1,46 @@
+
+$shadow: 0 0.4rem 1.4rem 0 rgba(34, 56, 66, 0.5);
+$correct: #28a745;
+$incorrect: #dc3545;
+$color: #ffffff;
+$text: center;
+$f: flex;
+$c: column;
+
+
+@mixin flex ($align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@import 'game';
+@import 'app';
+@import 'end';
+@import 'highscores';
+
+@media screen and (max-width: 320px){
+       .container{
+         max-width: 90vw;
+         @include flex(space-around, center);
+       }
+
+       #progressText{
+           font-size: 2rem;
+       }
+
+       .hud-prefix{
+           display: flex;
+       }
+
+       h2#question{
+           font-size: 2rem;
+       }
+
+       .hud-item{
+           margin: 0;
+       }
+       h1{
+           text-align: center;
+       }
+}
